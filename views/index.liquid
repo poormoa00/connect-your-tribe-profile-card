@@ -1,14 +1,35 @@
 {% render 'partials/head.liquid' %}
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+<section>
+     <div class="business">
+    
+      <div class="information">
+        
+        <img src="assets/aria.jpg" alt="Aria Poormohsein" style="float:left; margin-right: 20px;" width="80" height="80">
+        <ion-icon name="location-outline"></ion-icon> 
+        <p>FDND 24/25</p>
+        <p>{{ person.name }}</p>
+        <p>Amsterdam</p>
+    
+      </div>
+  <div class="list">
+  <button class="active">
+    <ion-icon name="logo-snapchat"></ion-icon>
+    <label>Snapchat</label>
+  </button>
 
-  <p>{{ person.name }}</p>
+  <button>
+    <ion-icon name="logo-twitter"></ion-icon>
+    <label>Twitter</label>
+  </button>
 
-  <footer></footer>
-</article>
+  <button> 
+  <ion-icon name="logo-github"></ion-icon>
+  <label>Github</label>
+  </button>
+  </div>
+</section>
+
+ <script src="scripts/script.js"></script>
 
 {% render 'partials/foot.liquid' %}
