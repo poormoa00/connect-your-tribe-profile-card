@@ -95,6 +95,12 @@
     opacity: 0.85;
   }
   
+  /* Achterkant styling */
+.card-back {
+    background: linear-gradient(135deg, #242424, #101010);
+    transform: rotateY(180deg);
+    padding: 25px;
+  }
   
   /* Flip Button */
   .flip-button {
