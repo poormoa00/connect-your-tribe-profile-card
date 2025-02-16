@@ -1,0 +1,126 @@
+/* Algemene opmaak */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1f1f1f, #333);
+  }
+  
+  /* Kaart stijl */
+  .business-card {
+    padding: 20px;
+    width: 100%;
+    height: 650px;
+    perspective: 1800px; 
+  
+    @media screen and (min-width: 431px) {
+      width: 600px;
+      height: 370px;  
+  }
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+  }
+  
+  .business-card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Voorkant & Achterkant */
+  .card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Voorkant styling */
+  .card-front {
+    background: linear-gradient(135deg, #ff8c00, #ff5e00);
+  }
+  
+  .card-front img {
+    width: 150px;
+    height: 180px;
+    border-radius: 45%;
+    border: 2px solid white;
+    margin-bottom: 150px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+  
+    @media screen and (min-width: 431px) {
+    margin-bottom: 20px;  
+    }
+  }
+  
+  .card-front h1 {
+    font-size: 2rem;
+    margin-top: -100px;
+    margin-bottom: 10px;
+  
+    @media screen and (min-width: 431px) {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+  }
+  
+  .card-front p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+  }
+  
+  
+  /* Flip Button */
+  .flip-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: white;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.15);
+  
+    @media screen and (min-width: 431px) {
+     padding: 10px 20px;
+     font-size: 1.1rem;
+     border-radius: 8px;
+  }
+  }
+  
+  .flip-button:hover {
+    background: black;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+  }
+  
