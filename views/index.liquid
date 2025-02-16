@@ -1,35 +1,56 @@
 {% render 'partials/head.liquid' %}
 
-<section>
-     <div class="business">
-    
-      <div class="information">
-        
-        <img src="assets/aria.jpg" alt="Aria Poormohsein" style="float:left; margin-right: 20px;" width="80" height="80">
-        <ion-icon name="location-outline"></ion-icon> 
-        <p>FDND 24/25</p>
-        <p>{{ person.name }}</p>
-        <p>Amsterdam</p>
-    
-      </div>
-  <div class="list">
-  <button class="active">
-    <ion-icon name="logo-snapchat"></ion-icon>
-    <label>Snapchat</label>
-  </button>
+<section class="business-card">
+        <article class="card-inner">
+            
+            <!-- Voorkant -->
+            <div class="card-front">
+                <header>
+                    <img src="assets/aria.jpg" alt="Jouw Naam">
+                    <h1>{{ person.name }}</h1>
+                    <p>Front-end Developer</p>
+                </header>
 
-  <button>
-    <ion-icon name="logo-twitter"></ion-icon>
-    <label>Twitter</label>
-  </button>
+                <nav>
+                    <button class="flip-button">Meer over mij</button>
+                </nav>
+            </div>
 
-  <button> 
-  <ion-icon name="logo-github"></ion-icon>
-  <label>Github</label>
-  </button>
-  </div>
-</section>
+            <!-- Achterkant -->
+            <div class="card-back">
+                <header>
+                    <h2>Over Mij</h2>
+                    <p>Ik ben een gepassioneerde webdeveloper met een focus op front-end development.</p>
+                </header>
 
- <script src="scripts/script.js"></script>
+                <ul class="contact-info">
+                    <li>
+                      <ion-icon name="mail-outline"></ion-icon>
+                      <a href="mailto:aria.poormohsein@hva.nl">aria.poormohsein@hva.nl</a>
+                    </li>
+
+                    <li>
+                      <ion-icon name="call-outline"></ion-icon>
+                      <a href="tel:+31612345678">+31 6 12345678</a>
+                    </li>
+
+                    <li>
+                      <ion-icon name="logo-github"></ion-icon> 
+                      <a href="https://github.com/poormoa00">GitHub</a>
+                    </li>
+
+                    <li>
+                      <ion-icon name="logo-linkedin"></ion-icon> 
+                      <a href="https://www.linkedin.com/in/jouwnaam">LinkedIn</a>
+                    </li>
+                </ul>
+
+                <button class="flip-button">Terug</button>
+            </div>
+        </article>
+    </section>
+
+    <script src="scripts/script.js"></script>
+
 
 {% render 'partials/foot.liquid' %}
